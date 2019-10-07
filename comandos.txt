@@ -1,0 +1,65 @@
+## https://www.youtube.com/watch?v=qVUr4YC6ZXA&feature=em-uploademail
+
+yarn init -y
+
+yarn add typescript -D
+
+yarn tsc --init
+
+# Configure tsconfig.json
+"target": "es6",
+"sourceMap": true,
+"outDir": "./dist",
+"moduleResolution": "node",
+"baseUrl": "./src",
+
+# Antes da última chave no tsconfig.json
+},
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
+
+# Compila para javascript
+yarn tsc
+
+# Execute o arquivo compilado
+node dist/index.js
+
+yarn add concurrently nodemon -D
+
+# Configure package.json
+"scripts": {
+    "dev": "concurrently \"tsc -w\" \"nodemon dist/index.js\""
+  },
+
+yarn dev
+
+yarn add express
+
+yarn add @types/express -D
+
+yarn add morgan
+
+yarn add @types/morgan -D
+
+yarn add mongoose
+
+yarn add @types/mongoose -D
+
+sudo service mongod start
+
+yarn add jsonwebtoken
+
+yarn add @types/jsonwebtoken -D
+
+yarn add dotenv
+
+yarn add @types/dotenv -D
+
+yarn add bcryptjs
+
+yarn add @types/bcryptjs -D
+
+# Crie o arquivo types.d.ts
+# Configure o tsconfig.json antes da última chave
+"files": ["types.d.ts"]
